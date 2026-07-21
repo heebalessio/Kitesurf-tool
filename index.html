@@ -174,9 +174,9 @@
   .lc-top{display:flex;align-items:center;justify-content:space-between;margin:4px 2px 14px;color:var(--foam)}
   .lc-top .lbl{letter-spacing:.16em;text-transform:uppercase;font-size:11px;font-weight:700;opacity:.85}
   .lc-top .cnt{font-family:'Archivo Black';font-size:13px;color:var(--sun)}
-  .flashwrap{perspective:1700px}
+  .flashwrap{perspective:1700px;animation:dealIn .5s var(--ease) both}
   .flash{position:relative;min-height:400px;transform-style:preserve-3d;cursor:pointer;
-    transition:transform .6s var(--spring);animation:dealIn .5s var(--ease) both}
+    transition:transform .6s var(--spring)}
   @keyframes dealIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
   .flash.flipped{transform:rotateY(180deg)}
   .face{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;
@@ -344,11 +344,11 @@ const CHAPTERS = [
       {tag:'Deutschland', h:'Seit 1999', p:'An deutschen Küsten gibt es den Kitesurf-Sport <b>seit 1999</b> – und die Szene wächst bis heute weiter.'},
     ],
     questions:[
-      {q:'Wie viele Menschen kiten weltweit regelmäßig (Schätzung)?', options:['≈ 50.000','≈ 500.000','≈ 5 Millionen','≈ 50 Millionen'], correct:1, explain:'Die Schätzung liegt bei etwa 500.000 Kitern weltweit.'},
-      {q:'Kite- und Bar-Systeme aus welchem Zeitraum solltest du meiden?', options:['vor 1999','vor 2006','vor 2012','vor 2018'], correct:1, explain:'Erst ab 2006 wurde die Sicherheit deutlich erhöht.'},
-      {q:'Wer entwickelte den »Tubekite«?', options:['Robby Naish','Cory Roeseler','Die Gebrüder Legaignoux','Der VDS'], correct:2, explain:'Die Gebrüder Legaignoux in Frankreich – mit aufblasbaren Luftschläuchen.'},
-      {q:'Seit wann existiert der Sport an deutschen Küsten?', options:['1985','1999','2006','2014'], correct:1, explain:'Seit 1999 – und die Szene steckt noch in der Entwicklung.'},
-      {q:'Welche Windsurf-Legende brachte das Kiten voran?', options:['Cory Roeseler','Robby Naish','Franka','Ben'], correct:1, explain:'Robby Naish, die lebende Windsurf-Legende.'},
+      {q:'Wie viele Menschen kiten weltweit regelmäßig (Schätzung)?', options:['≈ 250.000','≈ 500.000','≈ 750.000','≈ 1 Million'], correct:1, explain:'Die Schätzung liegt bei etwa 500.000 Kitern weltweit.'},
+      {q:'Kite- und Bar-Systeme aus welchem Baujahr solltest du meiden?', options:['vor 2003','vor 2006','vor 2008','vor 2010'], correct:1, explain:'Erst ab dem Baujahr 2006 wurde die Sicherheit deutlich erhöht.'},
+      {q:'Wer entwickelte den »Tubekite« mit aufblasbaren Schläuchen?', options:['Robby Naish','Cory Roeseler','Die Gebrüder Legaignoux','Laird Hamilton'], correct:2, explain:'Die Gebrüder Legaignoux in Frankreich – ihr Rahmen aus Luftschläuchen ermöglichte den Wasserstart.'},
+      {q:'Seit wann existiert der Sport an deutschen Küsten?', options:['1995','1999','2002','2006'], correct:1, explain:'Seit 1999 – die Szene steckt danach noch lange in der Entwicklung.'},
+      {q:'Welche Windsurf-Legende trieb das Kiten in den späten 90ern voran?', options:['Cory Roeseler','Robby Naish','Bjørn Dunkerbeck','Laird Hamilton'], correct:1, explain:'Robby Naish, die lebende Windsurf-Legende, entdeckte das Kiten für sich.'},
     ]
   },
   {
@@ -363,12 +363,12 @@ const CHAPTERS = [
       {tag:'Check', h:'Vor dem Wasser', p:'Vor dem Wasser die <b>Anknüpfpunkte</b>, das <b>Segel auf Löcher</b> sowie <b>Reissverschlüsse und Nähte</b> prüfen – so gibt es keine böse Überraschung.'},
     ],
     questions:[
-      {q:'Was gibt dem Kite seine Form?', options:['Die Quertube','Die Fronttube','Die Backline','Der Chicken Loop'], correct:1, explain:'Die Fronttube – aufgepumpt gibt sie dem Kite Form und Stabilität.'},
-      {q:'Wie viel Druck gehört üblicherweise in den Kite?', options:['1–3 PSI','6–9 PSI','15–20 PSI','ca. 30 PSI'], correct:1, explain:'Meist 6 bis 9 PSI, oder bis er sich kaum noch eindrücken lässt.'},
-      {q:'Was ist die »Smiley-Position«?', options:['Kite auf den Rücken gedreht','Kite im Zenit','Bar ganz nach vorne','Chicken Loop offen'], correct:0, explain:'Zum Tragen dreht man den Kite auf den Rücken.'},
-      {q:'Womit sicherst du den liegenden Kite am Boden?', options:['mit Sand','mit einem Board, Finnen nach oben','mit der Bar','gar nicht'], correct:1, explain:'Mit einem Board, Finnen nach oben.'},
-      {q:'Warum den Kite nicht in der Sonne liegen lassen?', options:['Die Farbe bleicht','Luft dehnt sich aus, Tube kann platzen','Er fliegt weg','Er wird nass'], correct:1, explain:'Wärme lässt die Luft ausdehnen – die Tube kann platzen.'},
-      {q:'Welche Aufgabe haben die Quertubes / Struts?', options:['Sie geben die Form','Sie geben dem Segel Stabilität','Sie steuern','Sie bremsen'], correct:1, explain:'Struts sorgen für die Stabilität des Segels.'},
+      {q:'Was gibt dem Kite seine Form?', options:['Die Quertubes (Struts)','Die Fronttube','Die Steuerleinen','Der Bladder'], correct:1, explain:'Die Fronttube gibt die Form; die Quertubes/Struts geben nur die Stabilität.'},
+      {q:'Wie viel Druck gehört üblicherweise in den Kite?', options:['2–4 PSI','6–9 PSI','10–14 PSI','16–20 PSI'], correct:1, explain:'Meist 6 bis 9 PSI – oder bis er sich mit Daumen und Zeigefinger kaum noch eindrücken lässt.'},
+      {q:'Was ist die »Smiley-Position«?', options:['Kite bei 12 Uhr geparkt','Kite auf den Rücken gedreht (zum Tragen)','Kite mit dem Board gesichert','Kite mit der Anströmkante nach unten'], correct:1, explain:'Zum Tragen dreht man den Kite auf den Rücken.'},
+      {q:'Womit sicherst du den liegenden Kite am Boden?', options:['mit Sand auf der Anströmkante','mit dem Board, Finnen nach oben','mit dem Board, Finnen nach unten','indem du ihn zusammenlegst'], correct:1, explain:'Mit einem Board, Finnen nach oben – so verkratzt nichts.'},
+      {q:'Warum den aufgepumpten Kite nicht in der Sonne liegen lassen?', options:['Die Farben bleichen aus','Die Luft dehnt sich aus, die Tube kann platzen','Die Leinen verspröden','Der Sand verklebt die Ventile'], correct:1, explain:'Wärme lässt die Luft ausdehnen – die Tube kann platzen.'},
+      {q:'Welche Aufgabe haben die Quertubes / Struts?', options:['Sie geben dem Kite die Form','Sie geben dem Segel Stabilität','Sie verbinden die Steuerleinen','Sie halten den Druck der Fronttube'], correct:1, explain:'Struts sorgen für die Stabilität; die Form kommt von der Fronttube.'},
     ]
   },
   {
@@ -382,11 +382,11 @@ const CHAPTERS = [
       {tag:'Sicherheit', h:'Safety Leash', p:'Die <b>Safety Leash</b> verbindet Kite und Kiter. Löst du den Quickrelease aus, hängt der Kite <b>nur noch an der Safety Leash</b>.'},
     ],
     questions:[
-      {q:'Was prüfst du IMMER an der Bar?', options:['Die Farbe','Ob der Quickrelease funktioniert','Die Länge','Das Gewicht'], correct:1, explain:'Der Quickrelease muss funktionieren und darf nicht durch Sand/Salz blockiert sein.'},
-      {q:'Was ist der schwächste Punkt in den Leinen?', options:['Knoten','Die Bar','Der Chicken Loop','Die Enden'], correct:0, explain:'Knoten – deshalb immer darauf achten.'},
-      {q:'Welche Farben hat die LINKE Seite?', options:['Dunkle Farben','Warnfarben (rot, orange, gelb, rosa)','Nur Weiß','Keine'], correct:1, explain:'Links = Warnfarben, rechts = dunkle Farben.'},
-      {q:'Wie oft sollte die Trimmleine erneuert werden?', options:['nie','nach 1–2 Jahren','jeden Monat','nach 10 Jahren'], correct:1, explain:'Nach 1–2 Jahren fängt sie an sich zu lösen.'},
-      {q:'Wo wird der Chicken Loop eingehakt?', options:['an der Fronttube','im Trapezhaken','am Board','an der 5ten Leine'], correct:1, explain:'In den Haken des Trapezes.'},
+      {q:'Was prüfst du IMMER an der Bar?', options:['Ob die Trimmleine fabrikneu ist','Ob der Quickrelease funktioniert','Ob die Farben richtig sortiert sind','Ob die Bar mittig zentriert ist'], correct:1, explain:'Der Quickrelease muss funktionieren und darf nicht durch Sand, Salz oder Schmutz blockiert sein.'},
+      {q:'Was ist der schwächste Punkt in den Leinen?', options:['Knoten','die Verbindung zur Bar','die Anknüpfpunkte am Kite','die Mitte der Leine'], correct:0, explain:'Knoten schwächen die Leine am stärksten.'},
+      {q:'Welche Farben hat die LINKE Seite?', options:['Dunkle Farben (schwarz, grau, blau)','Warnfarben (rot, orange, gelb, rosa)','Nur Signalrot','Grün und Weiß'], correct:1, explain:'Links = Warnfarben, rechts = dunkle Farben.'},
+      {q:'Wann sollte die Trimmleine erneuert werden?', options:['nach jeder Saison','nach 1–2 Jahren','nach 3–4 Jahren','erst nach 5 Jahren'], correct:1, explain:'Nach 1–2 Jahren fängt sie an, sich zu lösen.'},
+      {q:'Wo wird der Chicken Loop eingehakt?', options:['im Trapezhaken','an der Safety Leash','in der Bar-Mitte','direkt am Depower-Tampen'], correct:0, explain:'In den Haken des Trapezes – der Depower-Tampen ist zwar mit ihm verbunden, aber nicht der Einhakpunkt.'},
     ]
   },
   {
@@ -400,11 +400,11 @@ const CHAPTERS = [
       {tag:'Pflege', h:'Kalt auswaschen', p:'Neopren nur mit <b>kaltem Süsswasser</b> auswaschen. Wärme löst die Klebestellen und lässt <b>Bakterien</b> entstehen.'},
     ],
     questions:[
-      {q:'Bei einem 5/4 mm-Neopren – wofür steht die erste Zahl?', options:['Arme','Herz und Lunge','Beine','Kopf'], correct:1, explain:'Die erste Zahl gilt für Herz und Lunge.'},
-      {q:'Welche Neoprendicke passt etwa zu +15 °C?', options:['6 mm','4 mm','2 mm','8 mm'], correct:1, explain:'Rund 4 mm bei +15 °C.'},
-      {q:'Womit wäschst du Neopren aus?', options:['warmem Wasser','kaltem Süsswasser','Salzwasser','Spülmittel'], correct:1, explain:'Nur kaltes Süsswasser – sonst lösen sich die Klebestellen.'},
-      {q:'Wie stellst du das Trapez ein?', options:['locker','so eng wie möglich','mittel','egal'], correct:1, explain:'So eng wie möglich, damit es stabilen Halt gibt.'},
-      {q:'Warum die Finnenschrauben öfter checken?', options:['Rost','Sie lösen sich durch Vibration','Die Farbe','Das Gewicht'], correct:1, explain:'Vibration beim Fahren und Transport löst die Schrauben.'},
+      {q:'Bei einem 5/4 mm-Neopren – wofür steht die erste Zahl?', options:['die Arme und Beine','den Rumpf für Herz und Lunge','die beweglichen Körperteile','die Gesamtdicke'], correct:1, explain:'Die erste Zahl gilt für Herz und Lunge; die zweite für die beweglichen Teile.'},
+      {q:'Welche Neoprendicke passt etwa zu +15 °C?', options:['6 mm','5 mm','4 mm','3 mm'], correct:2, explain:'Rund 4 mm bei +15 °C (6 mm≈+5, 5 mm≈+10, 3 mm≈+20 °C).'},
+      {q:'Womit wäschst du Neopren aus?', options:['warmem Süsswasser','kaltem Süsswasser','lauwarmem Salzwasser','Wasser mit mildem Reiniger'], correct:1, explain:'Nur kaltes Süsswasser – Wärme löst die Klebestellen.'},
+      {q:'Wie stellst du das Trapez ein?', options:['möglichst locker für Bewegungsfreiheit','so eng wie möglich','mittelfest, eine Handbreit Luft','locker, aber mit Zusatzgurt'], correct:1, explain:'So eng wie möglich, damit es stabilen Halt gibt.'},
+      {q:'Warum die Finnenschrauben öfter checken?', options:['Salzwasser lässt sie rosten','Vibrationen lösen sie mit der Zeit','Sie dehnen sich bei Wärme','UV-Licht macht sie spröde'], correct:1, explain:'Vibration beim Fahren und Transport löst die Schrauben.'},
     ]
   },
   {
@@ -417,11 +417,11 @@ const CHAPTERS = [
       {tag:'Vorhersage', h:'Nur ~48 Stunden', p:'Wind & Wetter findest du auf <b>windfinder.com</b>, <b>windguru.cz</b> oder <b>dmi.dk</b>. Nur etwa die <b>48-Stunden-Vorhersage</b> liegt einigermaßen richtig.'},
     ],
     questions:[
-      {q:'Welche Windrichtung ist am sichersten?', options:['Onshore','Offshore','Sideshore','egal'], correct:2, explain:'Sideshore – Start vom Wasser, bei Fehlern bleibst du in Ufernähe.'},
-      {q:'Was bedeutet Offshore?', options:['Wind aufs Land','Wind aufs Meer – No Go','seitlicher Wind','windstill'], correct:1, explain:'Ablandig: selbst Profis werden rausgetrieben. Absolutes No Go.'},
-      {q:'Woran erkennst du ein Gewitter?', options:['Cumulo-Nimbus-Wolke','an den Möwen','an der Ebbe','am roten Himmel'], correct:0, explain:'An der »Cumulo Nimbus«-Wolke.'},
-      {q:'Wie lange ist die Wettervorhersage etwa zuverlässig?', options:['6 Stunden','48 Stunden','1 Woche','1 Monat'], correct:1, explain:'Nur ca. 48 Stunden liegen in etwa richtig.'},
-      {q:'Warum ist Onshore problematisch?', options:['zu wenig Wind','Fehler bringen dich ans Ufer','zu kalt','kein Start möglich'], correct:1, explain:'Jeder Fehler bringt dich näher ans Ufer – oft zu nah.'},
+      {q:'Welche Windrichtung ist am sichersten?', options:['Onshore (auflandig)','Offshore (ablandig)','Sideshore (seitlich)','Side-Onshore'], correct:2, explain:'Sideshore – Start vom Wasser, bei Fehlern bleibst du in Ufernähe.'},
+      {q:'Was bedeutet Offshore?', options:['Wind weht auflandig zum Strand','Wind weht ablandig aufs Meer','Wind weht seitlich am Ufer entlang','Wind kommt schräg von vorne'], correct:1, explain:'Ablandig: selbst Profis werden aufs offene Meer getrieben. Absolutes No Go.'},
+      {q:'Woran erkennst du ein aufziehendes Gewitter?', options:['an der Cumulo-Nimbus-Wolke','an hohen Cirrus-Schleiern','an plötzlicher Windstille','am Farbwechsel des Wassers'], correct:0, explain:'An der »Cumulo Nimbus«-Wolke – mit Wind im Rücken siehst du sie leicht zu spät.'},
+      {q:'Wie lange ist die Wettervorhersage etwa zuverlässig?', options:['24 Stunden','48 Stunden','72 Stunden','5 Tage'], correct:1, explain:'Nur etwa 48 Stunden liegen in etwa richtig.'},
+      {q:'Warum ist Onshore problematisch?', options:['Der Wind ist dort immer zu schwach','Jeder Fehler treibt dich ans Ufer','Man wird aufs offene Meer getrieben','Ein Start vom Wasser ist unmöglich'], correct:1, explain:'Auflandig: jeder Fehler bringt dich näher ans Ufer. (Aufs Meer treibt dich Offshore.)'},
     ]
   },
   {
@@ -434,10 +434,10 @@ const CHAPTERS = [
       {tag:'Ohne Messgerät', h:'Beobachten', p:'Ohne Windmessgerät hilft die <b>Beaufort-Tabelle</b> – oder du beobachtest, <b>welche Kitegrößen</b> auf dem Wasser sind.'},
     ],
     questions:[
-      {q:'Ab welcher Windstärke sollte ein Anfänger nicht mehr aufs Wasser?', options:['ab 3','ab 5','ab 7','ab 10'], correct:2, explain:'Ab Windstärke 7 (steifer Wind).'},
-      {q:'Welcher Wind ist für Anfänger ideal?', options:['5–8 kn','14–20 kn','25–30 kn','35+ kn'], correct:1, explain:'Mäßiger Wind von 14–20 Knoten.'},
-      {q:'Was bedeutet Windstärke 12?', options:['windstill','frische Briese','Sturm','Orkan'], correct:3, explain:'Bft 12 = Orkan, verwüstende Wirkung.'},
-      {q:'Was bedeutet Windstärke 0?', options:['Orkan','windstill','Sturm','Briese'], correct:1, explain:'Bft 0 = windstill, der Rauch steigt senkrecht.'},
+      {q:'Ab welcher Windstärke sollte ein Anfänger nicht mehr aufs Wasser?', options:['ab Bft 5','ab Bft 6','ab Bft 7','ab Bft 8'], correct:2, explain:'Ab Windstärke 7 (steifer Wind).'},
+      {q:'Welcher Wind ist für Anfänger ideal?', options:['8–12 kn','14–20 kn','20–25 kn','22–28 kn'], correct:1, explain:'Mäßiger Wind von 14–20 Knoten.'},
+      {q:'Was bedeutet Windstärke 12?', options:['steifer Wind','stürmischer Wind','Sturm','Orkan'], correct:3, explain:'Bft 12 = Orkan mit verwüstender Wirkung – das obere Ende der Skala.'},
+      {q:'Was bedeutet Windstärke 0?', options:['windstill','leiser Zug','leichte Briese','schwacher Wind'], correct:0, explain:'Bft 0 = windstill, der Rauch steigt senkrecht (Bft 1 wäre »leiser Zug«).'},
     ]
   },
   {
@@ -452,11 +452,11 @@ const CHAPTERS = [
       {tag:'Powerzone +++', h:'Meiste Kraft', p:'Direkt vor uns entsteht der <b>meiste Druck</b>. Hier holst du dir Power aufs Board – aber: den Kite <b>niemals in der Powerzone starten</b>!'},
     ],
     questions:[
-      {q:'Wo ist die ruhigste Position (Parkposition)?', options:['3 Uhr','12 Uhr (Zenit)','9 Uhr','6 Uhr'], correct:1, explain:'12 Uhr – der Zenit, hier parkt der Kite.'},
-      {q:'Wo ist der Druck am geringsten?', options:['Powerzone','Windfensterrand','Softzone','Zenit-Mitte'], correct:1, explain:'Am Windfensterrand – hier sicher starten und landen.'},
-      {q:'Wo starten wir den Kite NIEMALS?', options:['am Rand','in der Powerzone','im Zenit','links'], correct:1, explain:'Niemals in der Powerzone – dort entsteht die meiste Kraft.'},
-      {q:'In welcher Zone entsteht der meiste Zug?', options:['Windfensterrand','Softzone','Powerzone','Parkposition'], correct:2, explain:'In der Powerzone, direkt vor uns.'},
-      {q:'Je tiefer der Kite fliegt …', options:['desto ruhiger','desto unruhiger und schwerer steuerbar','desto weniger Zug','nichts ändert sich'], correct:1, explain:'Tief = unruhig und schwer zu steuern.'},
+      {q:'Wo ist die ruhigste Position (Parkposition)?', options:['9 Uhr (Rand)','12 Uhr (Zenit)','1:30 Uhr','3 Uhr (Rand)'], correct:1, explain:'12 Uhr – der Zenit, hier parkt der Kite ruhig.'},
+      {q:'Wo ist der Zug am geringsten?', options:['in der Powerzone','am Windfensterrand','in der Softzone','in der Fenstermitte'], correct:1, explain:'Am Windfensterrand – hier sicher starten, landen und ins Board steigen.'},
+      {q:'Wo starten wir den Kite NIEMALS?', options:['am Windfensterrand','in der Powerzone','in der Softzone','am 9-Uhr-Rand'], correct:1, explain:'Niemals in der Powerzone – dort entsteht die meiste Kraft.'},
+      {q:'In welcher Zone entsteht der meiste Zug?', options:['am Windfensterrand','in der Softzone','in der Powerzone','im Zenit'], correct:2, explain:'In der Powerzone, direkt vor uns.'},
+      {q:'Je tiefer der Kite fliegt …', options:['desto ruhiger und stabiler','desto unruhiger und schwerer steuerbar','desto weniger Zug entsteht','desto langsamer reagiert er'], correct:1, explain:'Tief = unruhig und schwer zu steuern.'},
     ]
   },
   {
@@ -470,10 +470,10 @@ const CHAPTERS = [
       {tag:'Revier-Gefahren', h:'Augen auf', p:'Achte auf <b>Untiefen, Strömungen</b>, spitze Muscheln, <b>Quallen, Haie</b>, Gezeiten, Korallenriffe sowie <b>Wracks oder Anker</b> unter der Oberfläche.'},
     ],
     questions:[
-      {q:'Wo greifst du einen herrenlosen Kite an?', options:['an der Bar','NUR an der Fronttubemitte','an den Leinen','an der Backsite'], correct:1, explain:'Ausschließlich an der Fronttubemitte.'},
-      {q:'Was tust du, wenn ein herrenloser Kite entgegenkommt?', options:['einfangen','ausweichen','festhalten','die Leinen greifen'], correct:1, explain:'Ausweichen – lose Leinen sind gefährlich.'},
-      {q:'Sollte man allein kiten?', options:['ja, immer','niemals allein bzw. Bescheid geben','nur bei Sturm','egal'], correct:1, explain:'Nie allein, oder jemandem Bescheid geben.'},
-      {q:'Was gehört zur Grundausrüstung?', options:['nur ein Board','funktionstüchtiger Quickrelease & Schutzkleidung','nur der Kite','eine Sonnenbrille'], correct:1, explain:'Aktueller Quickrelease und passende Schutzbekleidung.'},
+      {q:'Wo greifst du einen herrenlosen Kite an?', options:['an der Bar','an der Mitte der Fronttube','an einem der Wingtips','an den Steuerleinen'], correct:1, explain:'Ausschließlich an der Fronttubemitte.'},
+      {q:'Was tust du, wenn ein herrenloser Kite entgegenkommt?', options:['ihn sofort einfangen','ihm ausweichen','die Leinen greifen und stoppen','ihm zum Ufer folgen'], correct:1, explain:'Ausweichen – lose Leinen sind gefährlich. Sichern erst, wenn er am Ufer stillsteht.'},
+      {q:'Wie lautet die Regel zum Alleinkiten?', options:['Erlaubt, wenn du geübt bist','Nie allein – oder jemandem Bescheid geben','Allein nur in Ufernähe','Allein nur bei schwachem Wind'], correct:1, explain:'Nie allein, oder jemandem Bescheid geben.'},
+      {q:'Was gehört zur sicheren Grundausrüstung?', options:['Kite, Board und Bar genügen','ein funktionierender Quickrelease und passende Schutzbekleidung','Helm und Prallweste sind immer Pflicht','nur ein funktionierender Kite'], correct:1, explain:'Aktueller Quickrelease und Schutzbekleidung; Helm/Prallweste je nach Bedarf.'},
     ]
   },
   {
@@ -487,12 +487,12 @@ const CHAPTERS = [
       {tag:'Achtung', h:'Trennen? Gut überlegen', p:'Gut überlegen, ob du dich <b>komplett vom Kite trennst</b> – danach bist du für Rettungskräfte <b>schlechter sichtbar</b> und musst evtl. gegen Strömung schwimmen.'},
     ],
     questions:[
-      {q:'Welcher ist der ERSTE Schritt der Selbstrettung?', options:['Board lösen','Quickrelease auslösen & warten','sofort wegschwimmen','Kite falten'], correct:1, explain:'Zuerst Quickrelease auslösen, bis der Druck weg ist.'},
-      {q:'Woran hängt der Kite nach dem Auslösen?', options:['an der Bar','an der Safety line (5te Leine)','an nichts','am Board'], correct:1, explain:'Nur noch an der Safety line – ohne Druck.'},
-      {q:'Wie bewegst du dich beim Heranziehen der Leine?', options:['vorwärts','rückwärts','gar nicht','seitlich springend'], correct:1, explain:'Rückwärts, damit sich die lose Leine nicht verfängt.'},
-      {q:'Was machst du mit den losen Leinen?', options:['abschneiden','auf die Bar aufwickeln','loslassen','verknoten'], correct:1, explain:'Auf die Bar aufwickeln, bis der Kite bei dir ist.'},
-      {q:'Wie kommst du im TIEFEN Wasser an Land?', options:['Kite falten','auf die Fronttube setzen und als Segel nutzen','tauchen','warten'], correct:1, explain:'Auf die Fronttube setzen und den Kite als Segel nutzen.'},
-      {q:'Was ist KEIN Grund für eine Selbstrettung?', options:['plötzliche Windstille','Wind wird zu stark','Kite ist beschädigt','ein neuer Kite-Trend'], correct:3, explain:'Ein Trend ist kein Notfall – die anderen drei schon.'},
+      {q:'Welcher ist der ERSTE Schritt der Selbstrettung?', options:['die Leinen auf die Bar wickeln','den Quickrelease auslösen und warten','zum Kite schwimmen','den Kite auf 12 Uhr bringen'], correct:1, explain:'Zuerst Quickrelease auslösen, bis der Druck weg ist. Das Aufwickeln kommt später.'},
+      {q:'Woran hängt der Kite nach dem Auslösen?', options:['an der Bar','an der Safety line (5te Leine)','an den beiden Steuerleinen','an der Fronttube'], correct:1, explain:'Nur noch an der Safety line – ohne Druck.'},
+      {q:'Wie bewegst du dich beim Heranziehen der Leine?', options:['vorwärts zum Kite','rückwärts, weg vom Kite','seitlich zur Leine','auf der Stelle'], correct:1, explain:'Rückwärts, damit sich die lose Leine nicht in dir verfängt.'},
+      {q:'Was machst du mit den losen Leinen?', options:['am Trapez befestigen','auf die Bar aufwickeln','einfach treiben lassen','zu einem Knoten bündeln'], correct:1, explain:'Auf die Bar aufwickeln, bis der Kite bei dir ist.'},
+      {q:'Wie kommst du im TIEFEN Wasser an Land?', options:['den Kite in Trageposition drehen','dich auf die Fronttube setzen und segeln','die Bar als Paddel nutzen','einfach auf Rettung warten'], correct:1, explain:'Auf die Fronttube setzen und den Kite als Segel nutzen. Trageposition ist die Flachwasser-Variante.'},
+      {q:'Was ist KEIN offizieller Grund für eine Selbstrettung?', options:['plötzliche Windstille im tiefen Wasser','du willst landen, aber niemand ist da','die Wassertemperatur sinkt leicht ab','der Kite ist beschädigt'], correct:2, explain:'Die 4 Gründe sind: Windstille, zu starker Wind, Landen ohne Helfer und ein beschädigter Kite.'},
     ]
   },
   {
@@ -506,11 +506,11 @@ const CHAPTERS = [
       {tag:'Abstand', h:'360° freihalten', p:'Halte den <b>doppelten Leinenabstand</b> rundum frei. Nie über <b>liegende Kites</b> oder übende Schüler fliegen – sie sind unberechenbar.'},
     ],
     questions:[
-      {q:'Welche Seite / Farbe hat Vorfahrt?', options:['ROT','GRÜN (rechte Hand vorne)','beide gleich','keine'], correct:1, explain:'Grün: rechte Hand vorne in Fahrtrichtung.'},
-      {q:'Wer weicht beim Überholen aus?', options:['der Überholte','der Überholer – immer','niemand','der Langsamere'], correct:1, explain:'Der Überholer weicht immer aus.'},
-      {q:'Warum hat der Kiter in LEE Vorfahrt?', options:['er ist schneller','er kann nicht nach hinten sehen','er fährt rechts','reiner Zufall'], correct:1, explain:'LEE kann nicht nach hinten sehen und hat daher Vorfahrt.'},
-      {q:'Was bedeutet LUV?', options:['dem Wind abgewandt','woher der Wind kommt','immer rechts','immer links'], correct:1, explain:'Luv = woher der Wind kommt (upwind).'},
-      {q:'Wie fliegt der ausweichende Kiter (ROT) seinen Kite?', options:['im Zenit','tiefer als 10:30 / 1:30','in der Powerzone','egal'], correct:1, explain:'Tiefer als 10:30 bzw. 1:30 Uhr, um auszuweichen.'},
+      {q:'Welche Seite / Farbe hat Vorfahrt?', options:['ROT (linke Hand vorne)','GRÜN (rechte Hand vorne)','immer der Schnellere','immer der Kiter in Luv'], correct:1, explain:'Grün: rechte Hand vorne in Fahrtrichtung.'},
+      {q:'Wer weicht beim Überholen aus?', options:['der Überholte','der Überholende – immer','der Kiter in Lee','beide je zur Hälfte'], correct:1, explain:'Der Überholer weicht immer aus; der Kiter in Lee hat Vorfahrt.'},
+      {q:'Warum hat der Kiter in LEE Vorfahrt?', options:['weil er schneller unterwegs ist','weil er nicht nach hinten sehen kann','weil er in Luv fährt','weil er näher am Ufer ist'], correct:1, explain:'Der Kiter in Lee kann nicht nach hinten sehen und hat daher Vorfahrt.'},
+      {q:'Was bedeutet LUV?', options:['die dem Wind abgewandte Seite','die Seite, von der der Wind kommt','immer die rechte Seite','die Seite Richtung Ufer'], correct:1, explain:'Luv = woher der Wind kommt (upwind). Die abgewandte Seite ist Lee.'},
+      {q:'Wie fliegt der ausweichende Kiter (ROT) seinen Kite?', options:['im Zenit auf 12 Uhr','tiefer als 10:30 bzw. 1:30 Uhr','höher als 10 bzw. 2 Uhr','genau auf 3 Uhr'], correct:1, explain:'Tiefer als 10:30 bzw. 1:30 Uhr, um auszuweichen. Höher hält der Vorfahrtsberechtigte.'},
     ]
   },
   {
@@ -523,10 +523,10 @@ const CHAPTERS = [
       {tag:'Bremsen', h:'So stoppst du', p:'Kite auf <b>10:30 oder 1:30</b> stehen lassen, die <b>Bar nach vorne</b> schieben und den Druck aufs <b>hintere Bein</b> verstärken – so luvst du an. Dann Kite auf 12 Uhr parken.'},
     ],
     questions:[
-      {q:'Welches Zeichen bedeutet »Kite loslassen«?', options:['flache Hand am Kopf','Daumen hoch','beide Arme winken','einfaches Winken'], correct:1, explain:'Nur »Daumen hoch« bedeutet loslassen.'},
-      {q:'Was ist das Landezeichen?', options:['Daumen hoch','flache Hand auf den Kopf','Arme rauf und runter','ein Pfiff'], correct:1, explain:'Mit flacher Hand auf den Kopf winken.'},
-      {q:'Was ist das internationale Notzeichen?', options:['Daumen hoch','»müde Fliege« – beide Arme rauf/runter','einfaches Winken','Hupen'], correct:1, explain:'Die »müde Fliege« – beide Arme rauf und runter.'},
-      {q:'Wie bremst du ab?', options:['Bar ganz zu dir ziehen','Bar nach vorne & Druck aufs hintere Bein','Kite in die Powerzone','Quickrelease auslösen'], correct:1, explain:'Bar nach vorne, hinteres Bein belasten, anluven.'},
+      {q:'Welches Zeichen bedeutet »Kite loslassen«?', options:['flache Hand auf dem Kopf','Daumen nach oben','beide Arme auf und ab','eine Hand seitlich ausgestreckt'], correct:1, explain:'Nur »Daumen hoch« bedeutet loslassen – jedes andere Zeichen nicht.'},
+      {q:'Was ist das Landezeichen?', options:['Daumen nach oben','flache Hand auf den Kopf','Faust auf die Brust','Winken mit einer Hand'], correct:1, explain:'Mit flacher Hand auf den Kopf winken.'},
+      {q:'Was ist das internationale Notzeichen?', options:['Daumen nach unten','die »müde Fliege« – beide Arme auf und ab','eine Hand kreisen lassen','beide Arme still über dem Kopf'], correct:1, explain:'Die »müde Fliege« – beide Arme rauf und runter.'},
+      {q:'Wie bremst du ab?', options:['die Bar ganz zu dir heranziehen','die Bar nach vorne schieben und das hintere Bein belasten','den Kite kurz in die Powerzone lenken','den Chicken Loop kurz öffnen'], correct:1, explain:'Bar nach vorne, hinteres Bein belasten, anluven.'},
     ]
   },
   {
@@ -538,10 +538,10 @@ const CHAPTERS = [
       {tag:'Infos', h:'Wo erkundigen?', p:'Infos zum Spot findest du im <b>Internet</b>, bei <b>Kiteschulen vor Ort</b> und bei den <b>Locals</b> am Spot.'},
     ],
     questions:[
-      {q:'Wie ist die Regel in Deutschland?', options:['überall erlaubt','überall verboten – außer explizit erlaubt','nur im Sommer','nur mit Verein'], correct:1, explain:'Verboten, außer wo es explizit erlaubt ist.'},
-      {q:'Und in Dänemark?', options:['überall verboten','überall erlaubt – außer wo Schilder es verbieten','nur an 3 Spots','gleich wie in Deutschland'], correct:1, explain:'Erlaubt, außer durch Verbotsschilder untersagt.'},
-      {q:'Welche Zone solltest du meiden?', options:['eine freie Bucht','eine Naturschutzzone','das offene Meer','einen leeren Sandstrand'], correct:1, explain:'Naturschutzzonen (und Badezonen, Häfen …) meiden.'},
-      {q:'Wo bekommst du gute Spot-Infos?', options:['nur raten','Kiteschulen & Locals vor Ort','aus der Zeitung','gar nicht'], correct:1, explain:'Internet, Kiteschulen und Locals am Spot.'},
+      {q:'Wie ist die Regel in Deutschland?', options:['überall erlaubt, außer es ist verboten','überall verboten, außer es ist ausdrücklich erlaubt','nur mit Lizenz erlaubt','nur außerhalb der Badesaison erlaubt'], correct:1, explain:'Verboten, außer wo es explizit erlaubt ist. (Die erste Variante ist die dänische Regel.)'},
+      {q:'Und in Dänemark?', options:['überall verboten, außer ausdrücklich erlaubt','überall erlaubt, außer Verbotsschilder untersagen es','nur an ausgewiesenen Kitespots','dieselbe Regel wie in Deutschland'], correct:1, explain:'Erlaubt, außer durch Verbotsschilder untersagt – genau umgekehrt zu Deutschland.'},
+      {q:'Welche Zone solltest du meiden?', options:['ein weiter, leerer Sandstrand','eine Naturschutzzone mit Vögeln','eine offene Bucht mit Sideshore','ein Stehrevier ohne Boote'], correct:1, explain:'Naturschutzzonen (dazu Badezonen, Häfen, Schifffahrtstraßen …) meiden.'},
+      {q:'Wo bekommst du gute Spot-Infos?', options:['im Internet, bei Kiteschulen und Locals','ausschließlich aus der Wetter-App','nur durch eigenes Ausprobieren','allein bei der Wasserschutzpolizei'], correct:0, explain:'Internet, Kiteschulen vor Ort und Locals am Spot.'},
     ]
   },
   {
@@ -558,12 +558,12 @@ const CHAPTERS = [
       {tag:'Start', h:'Powerdive', p:'<b>Powerdive</b> = Zum Wasserstart steuerst du den Kite <b>aus dem Zenit</b> entschlossen Richtung <b>Powerzone</b>.'},
     ],
     questions:[
-      {q:'Was bedeutet »Depower«?', options:['der Zug nimmt zu','Bar wegschieben, Zug nimmt ab','bremsen','starten'], correct:1, explain:'Bar vom Körper weg bedeutet weniger Zug.'},
-      {q:'Was ist ein »Twintip«?', options:['ein Einrichtungsboard','ein Board für beide Richtungen','ein Kitetyp','eine Leine'], correct:1, explain:'Bidirektional – fährt in beide Richtungen.'},
-      {q:'Was ist die »Bladder«?', options:['die Außenhülle','der Innenschlauch der Tube','die Finne','eine Leine'], correct:1, explain:'Der Innenschlauch, der die Luft hält.'},
-      {q:'»Anluven« heißt …', options:['nach Lee','nach Luv','bremsen','springen'], correct:1, explain:'Richtungsänderung nach Luv.'},
-      {q:'Was ist »Bodydrag«?', options:['ein Sprung','auf dem Bauch übers Wasser ziehen lassen','eine Wende','ein Trick in der Luft'], correct:1, explain:'Auf dem Bauch liegend gezogen werden.'},
-      {q:'Was passiert beim »Backstall«?', options:['der Kite steigt','Strömung reißt ab, Kite kippt nach hinten','mehr Speed','nichts'], correct:1, explain:'Der Kite kippt nach hinten und stürzt ab.'},
+      {q:'Was bedeutet »Depower«?', options:['Bar zum Körper ziehen, mehr Zug','Bar vom Körper wegschieben, weniger Zug','die Bar nach links drehen','die 5te Leine straffen'], correct:1, explain:'Bar vom Körper weg = weniger Zug. Das Gegenteil (zum Körper ziehen) ist Anpowern.'},
+      {q:'Was ist ein »Twintip«?', options:['ein Board für nur eine Richtung (Directional)','ein Board für beide Fahrtrichtungen','ein aufblasbares Board','ein Board ganz ohne Finnen'], correct:1, explain:'Twintip = bidirektional, fährt in beide Richtungen.'},
+      {q:'Was ist die »Bladder«?', options:['die äußere Tuchhülle der Tube','der Innenschlauch, der die Luft hält','das Ventil zum Aufpumpen','die Naht zwischen den Struts'], correct:1, explain:'Der Innenschlauch (aus Latex o.ä.), der die Luft hält.'},
+      {q:'»Anluven« heißt …', options:['Richtungsänderung nach Lee (vom Wind weg)','Richtungsänderung nach Luv (zum Wind)','das Abbremsen des Kites','das Depowern der Bar'], correct:1, explain:'Anluven = nach Luv. Das Gegenteil (nach Lee) ist Abfallen.'},
+      {q:'Was ist »Bodydrag«?', options:['ein Sprung mit dem Board','sich ohne Board auf dem Bauch ziehen lassen','eine schnelle Wende gegen den Wind','ein Manöver in der Luft'], correct:1, explain:'Auf dem Bauch liegend übers Wasser gezogen werden – Kreuzen nach Luv ist möglich.'},
+      {q:'Was passiert beim »Backstall«?', options:['der Kite schießt nach vorne in die Powerzone','die Strömung reißt ab, der Kite kippt nach hinten','der Kite dreht sich um die eigene Achse','der Kite gewinnt plötzlich an Höhe'], correct:1, explain:'Die Luftströmung reißt ab, der Kite kippt nach hinten und stürzt ab.'},
     ]
   },
 ];
